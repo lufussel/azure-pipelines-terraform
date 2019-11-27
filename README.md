@@ -1,6 +1,6 @@
 # Introduction
 
-This repository provides an example set of resources and requirements to get started with Hashicorp products such as [Terraform](https://www.terraform.io/) and [Packer](https://www.packer.io/), including integration with [Azure Pipelines](https://docs.microsoft.com/en-gb/azure/devops/pipelines/) and [Key vault](https://docs.microsoft.com/en-gb/azure/key-vault/).
+This workshop provides an example set of resources and requirements to get started with Hashicorp products such as [Terraform](https://www.terraform.io/) and [Packer](https://www.packer.io/), including integration with [Azure Pipelines](https://docs.microsoft.com/en-gb/azure/devops/pipelines/) and [Key vault](https://docs.microsoft.com/en-gb/azure/key-vault/).
 
 The aim of this guidance is to provide quick start example for using a CICD automation process to deploy Terraform resources to Azure, without the need to manage secrets outside of Azure key vault.
 
@@ -14,7 +14,7 @@ The aim of this guidance is to provide quick start example for using a CICD auto
 
 ## Further resources
 
-Detailed documentation is available for further reading. 
+The following resources provide great instruction for further reading:
 
 - [Microsoft Docs](https://docs.microsoft.com/en-gb/azure/virtual-machines/linux/terraform-create-complete-vm) contains quick starts for deploying Azure resources with Terraform.
 - The Terraform Azure provider reference is available at [https://aka.ms/tfref](https://www.terraform.io/docs/providers/azurerm/).
