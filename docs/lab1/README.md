@@ -44,12 +44,12 @@ All steps from the build process are detailed below and can be execured from Azu
 
 ```bash
 # Input variables
-RESOURCE_GROUP_NAME="citadel-cicd-environment-rg"
-KEYVAULT_NAME="citadel-cicd-keyvault"
-STORAGE_ACCOUNT_NAME="citadelcicdtfstate"
+RESOURCE_GROUP_NAME="cicd-environment-rg"
+KEYVAULT_NAME="cicd-keyvault"
+STORAGE_ACCOUNT_NAME="lufusselcicdtfstate"
 STORAGE_ACCOUNT_CONTAINER_NAME="tfstate"
 LOCATION="uksouth"
-SERVICE_PRINCIPAL_NAME="http://lufussel-citadel-cicd"
+SERVICE_PRINCIPAL_NAME="http://lufussel-cicd"
 ```
 
 2. Create the resource group to deploy the key vault and storage account

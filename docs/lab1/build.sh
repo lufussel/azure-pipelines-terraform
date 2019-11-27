@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Input variables
-RESOURCE_GROUP_NAME="citadel-cicd-environment-rg"
-KEYVAULT_NAME="citadel-cicd-keyvault"
-STORAGE_ACCOUNT_NAME="citadelcicdtfstate"
+RESOURCE_GROUP_NAME="cicd-environment-rg"
+KEYVAULT_NAME="cicd-keyvault"
+STORAGE_ACCOUNT_NAME="lufusselcicdtfstate"
 STORAGE_ACCOUNT_CONTAINER_NAME="tfstate"
 LOCATION="uksouth"
-SERVICE_PRINCIPAL_NAME="http://lufussel-citadel-cicd"
+SERVICE_PRINCIPAL_NAME="http://lufussel-cicd"
 
 # Create resource group
 az group create --name $RESOURCE_GROUP_NAME --location $LOCATION
