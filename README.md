@@ -1,8 +1,8 @@
 # Introduction
 
-This lab provides an example set of resources and requirements to get started with Hashicorp products such as [Terraform](https://www.terraform.io/) and [Packer](https://www.packer.io/), including integration with [Azure Pipelines](https://docs.microsoft.com/en-gb/azure/devops/pipelines/) and [Key vault](https://docs.microsoft.com/en-gb/azure/key-vault/).
+This repository provides an example set of resources and requirements to get started with Hashicorp products such as [Terraform](https://www.terraform.io/) and [Packer](https://www.packer.io/), including integration with [Azure Pipelines](https://docs.microsoft.com/en-gb/azure/devops/pipelines/) and [Key vault](https://docs.microsoft.com/en-gb/azure/key-vault/).
 
-The aim of this lab is to provide quick start example for using a CICD automation process to deploy Terraform resources to Azure, without the need to manage secrets outside of Azure key vault.
+The aim of this guidance is to provide quick start example for using a CICD automation process to deploy Terraform resources to Azure, without the need to manage secrets outside of Azure key vault.
 
 ## Labs
 
