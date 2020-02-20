@@ -125,7 +125,7 @@ terraform apply
 
 ### Configuring and moving to a remote state
 
-8. We will now modify the configuration to use remote state. Open the `main.tf` with your favourite text editor (`code main.tf` for VS Code) and add the `backend` block which uses a **rewmote state**. This must be an available storage account such as the account created in [Lab 1: Environment](../lab1).
+8. We will now modify the configuration to use remote state. Open the `main.tf` with your favourite text editor (`code main.tf` for VS Code) and add the `backend` block which uses a **remote state**. This must be an available storage account such as the account created in [Lab 1: Environment](../lab1).
 
 ```hcl
 terraform {
