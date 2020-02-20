@@ -33,14 +33,14 @@ All steps from the build process are detailed below and can be execured from Azu
 
 1. Set input variables for the resources to created
 
-| Variable                       | Description                                                                           |
-| ------------------------------ | ------------------------------------------------------------------------------------- |
-| RESOURCE_GROUP_NAME            | Name of the resource group to deploy the resources                                    |
-| KEYVAULT_NAME                  | Name of the key vault to store secrets                                                |
-| STORAGE_ACCOUNT_NAME           | Name of the storage account to store Terraform state                                  |
-| STORAGE_ACCOUNT_CONTAINER_NAME | Name of the container to store Terraform state                                        |
-| LOCATION                       | Azure region to deploy resources into                                                 |
-| SERVICE_PRINCIPAL_NAME         | Name of the service principal to grant contributor permissions. Must begin "http://". |
+| Variable                         | Description                                                                           |
+| -------------------------------- | ------------------------------------------------------------------------------------- |
+| `RESOURCE_GROUP_NAME`            | Name of the resource group to deploy the resources                                    |
+| `KEYVAULT_NAME`                  | Name of the key vault to store secrets                                                |
+| `STORAGE_ACCOUNT_NAME`           | Name of the storage account to store Terraform state                                  |
+| `STORAGE_ACCOUNT_CONTAINER_NAME` | Name of the container to store Terraform state                                        |
+| `LOCATION`                       | Azure region to deploy resources into                                                 |
+| `SERVICE_PRINCIPAL_NAME`         | Name of the service principal to grant contributor permissions. Must begin "http://". |
 
 ```bash
 # Input variables
@@ -100,17 +100,11 @@ az keyvault secret set --vault-name $KEYVAULT_NAME --name "arm-client-secret" --
 az storage account create --resource-group $RESOURCE_GROUP_NAME --name $STORAGE_ACCOUNT_NAME --kind StorageV2 --sku Standard_LRS --encryption-services blob --https-only true
 
 # Get storage account key
-ACCOUNT_KEY=$(az storage account keys list --resource-group $RESOURCE_GROUP_NAME --account-name $STORAGE_ACCOUNT_NAME --query [0].value -o tsv)
+STORAGE_ACCOUNT_KEY=$(az storage account keys list --resource-group $RESOURCE_GROUP_NAME --account-name $STORAGE_ACCOUNT_NAME --query [0].value -o tsv)
 
 # Create blob container
-az storage container create --name $STORAGE_ACCOUNT_CONTAINER_NAME --account-name $STORAGE_ACCOUNT_NAME --account-key $ACCOUNT_KEY
+az storage container create --name $STORAGE_ACCOUNT_CONTAINER_NAME --account-name $STORAGE_ACCOUNT_NAME --account-key $STORAGE_ACCOUNT_KEY
 
 # Add storage account key to keyvault
-az keyvault secret set --vault-name $KEYVAULT_NAME --name "arm-access-key" --value $ACCOUNT_KEY
+az keyvault secret set --vault-name $KEYVAULT_NAME --name "arm-access-key" --value $STORAGE_ACCOUNT_KEY
 ```
-
-
-
-
-
-
